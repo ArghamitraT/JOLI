@@ -32,8 +32,13 @@ This file updates the shared dirichlet (empirical Bayes framework) prior with Gr
 ### **Results**
 Holds the scripts for result analysis
 
-### **Data**
-Holds sample data to run JOLI
+### **Sample Data**
+To test the script with **sample data**, you can download the dataset from the following link:
+
+🔗 **[Download Sample Data](https://drive.google.com/drive/folders/1aWmm-ZAsBTUhnqNyg3uNMNIMKvaV3QPN?usp=drive_link)**
+
+Once downloaded, place the files in the appropriate directory before running the script.
+
 
 ### **Environments**
 Has .yml and .txt files required to install and run JOLI
@@ -46,10 +51,12 @@ To set up and run **JOLI**, follow these steps:
 1. clone the repository to your local machine: `git clone https://github.com/ArghamitraT/JOLI.git`
 2. Inside the environments folder, you will find the following files:
 
+```bash
     JOLI_conda_requirements.txt
     JOLI_pip_requirements.txt
     JOLI.yml
-
+```
+    
 You can create the Conda environment using either of the following methods:
 🔹 Option 1: Using JOLI.yml (Recommended)
 
@@ -74,19 +81,19 @@ pip install -r Environments/JOLI_pip_requirements.txt
 
 JOLI provides several command-line flags to configure the execution. Below are the available options:
 
-| Flag | Type | Description |
-|------|------|---------|-------------|
-| `--data_folder` | `str` | Path for the processed data (output of process_bam_files.py, pkl files). |
-| `--output_path` | `str`  | Path for the output abundance file. |
-| `--sample1` | `str (list)` | Sample1 file name(s). |
-| `--sample2` | `str (list)`  | Sample2 file name(s) . |
-| `--GD_lr` | `float`  | Learning rate for Dirichlet gradient descent, default=0.01. |
-| `--alpha_initial` | `float` | `1` | The fixed sum value of alpha, default=1. For single sample (SS) we used 1, for multi-sample (MS) we used `10e5` |
-| `--max_em_rounds` | `int`  | The maximum number of EM iterations. |
-| `--experiment_num` | `int`  | Experiment setup: `1` for single sample, `4` for multisample |
-| `--process_bam_required` | `int`  | If `1`, only processes the BAM files and saves them as `.pkl` (EM will not run). |
-| `--process_saved_dir` | `str`  | Path to save the processed BAM files. |
-| `--bam_dir` | `str`  | Path of the original BAM files. |
+- **`--data_folder`** (`str`): Path for the processed data (output of `process_bam_files.py`, pkl files).  
+- **`--output_path`** (`str`): Path for the output abundance file.  
+- **`--sample1`** (`str (list)`): Sample1 file name(s) as a list (e.g., `['sample1', 'sample2']`).  
+- **`--sample2`** (`str (list)`): Sample2 file name(s) as a list (e.g., `['sample3', 'sample4']`).  
+- **`--GD_lr`** (`float`, default=`0.01`): Learning rate for Dirichlet gradient descent.  
+- **`--alpha_initial`** (`float`, default=`1`): The fixed sum value of alpha. For single sample (SS), use `1`; for multi-sample (MS), use `10e5`.  
+- **`--max_em_rounds`** (`int`, default=`30`): The maximum number of EM iterations.  
+- **`--experiment_num`** (`int`): Defines the experiment setup:
+  - `1` for single sample  
+  - `4` for multisample  
+- **`--process_bam_required`** (`int`): If set to `1`, only processes the BAM files and saves them as `.pkl` files (EM will not run).  
+- **`--process_saved_dir`** (`str`): Path to save the processed BAM files.  
+- **`--bam_dir`** (`str`): Path to the original BAM files.  
 
 ---
 
