@@ -14,6 +14,7 @@ To estimate the **Maximum A Posteriori (MAP) parameters**, we employ:
 - The **EM algorithm** within each sample  
 - **Gradient descent** for the shared prior parameters  
 
+JOLI builds upon the foundations of  **[NanoCount](https://github.com/a-slide/NanoCount)** as part of its development.
 
 ## Technical files, folders and their functionality
 

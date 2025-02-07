@@ -347,45 +347,6 @@ class Expec_Max:
 
             start1 = time.time() # comment
 
-            # Create a DataFrame for the current iteration
-            # current_stats = pd.DataFrame([{
-            #     'EM_loop': self.em_round,
-            #     'Alpha_summation': np.sum(self.all_alpha),
-            #     'EM_convergence': self.convergence,
-            #     'Spearman_corr_theta1_theta2': spearman_corr_theta1_theta2,
-            #     'Spearman_corr_theta1_alpha': spearman_corr_theta1_alpha,
-            #     'Spearman_corr_theta2_alpha': spearman_corr_theta2_alpha,
-            #     'pearson_corr_theta1_theta2': pearson_corr_theta1_theta2,
-            #     'pearson_corr_theta1_alpha': pearson_corr_theta1_alpha, 
-            #     'pearson_corr_theta2_alpha': pearson_corr_theta2_alpha,
-            #     **elbo_values,
-            #     **convergence_values
-            # }])
-
-            # # Concatenate the current iteration's DataFrame with the main DataFrame
-            # stats_df = pd.concat([stats_df, current_stats], ignore_index=True)
-
-            # if self.experiment_num == 4 or self.experiment_num == 5:
-            #     # Create a DataFrame for the loss history
-            #     GDloss_history_current = pd.DataFrame({
-            #         'GD_Loss': GDloss_history
-            #     })
-            #     # Append the loss history of the current iteration to the loss history DataFrame
-            #     GDloss_history_df = pd.concat([GDloss_history_df, GDloss_history_current], ignore_index=True)
-                
-            #     # Check if the directory exists
-            #     dir_path = os.path.dirname(final_GDloss_path)
-            #     if not os.path.exists(dir_path):
-            #         os.makedirs(dir_path)
-                    
-
-            #     with open(final_GDloss_path, 'wb') as f:
-            #         pickle.dump(GDloss_history_df, f)
-
-            # Save the state after each iteration
-            # stats_df.to_csv(final_EMstat_path, index=False)
-            # self.save_state(final_save_path)
-
             # comment
             end1 = time.time()
             interval = (end1-start1)/60
