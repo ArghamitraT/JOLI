@@ -83,10 +83,10 @@ JOLI provides several command-line flags to configure the execution. Below are t
 
 - **`--data_folder`** (`str`): Path for the processed data (output of `process_bam_files.py`, pkl files).  
 - **`--output_path`** (`str`): Path for the output abundance file.  
-- **`--sample1`** (`str (list)`): Sample1 file name(s) as a list (e.g., `['sample1', 'sample2']`).  
-- **`--sample2`** (`str (list)`): Sample2 file name(s) as a list (e.g., `['sample3', 'sample4']`).  
+- **`--sample1`** (`str (list)`): Sample1 file name(s).  
+- **`--sample2`** (`str (list)`): Sample2 file name(s).  
 - **`--GD_lr`** (`float`, default=`0.01`): Learning rate for Dirichlet gradient descent.  
-- **`--alpha_initial`** (`float`, default=`1`): The fixed sum value of alpha. For single sample (SS), use `1`; for multi-sample (MS), use `10e5`.  
+- **`--alpha_initial`** (`float`, default=`1`): The fixed sum value of alpha. For single sample (SS), use `1`; for multi-sample (MS), depends on number of isoforms, for 150k isoforms we used `10e5`.  
 - **`--max_em_rounds`** (`int`, default=`30`): The maximum number of EM iterations.  
 - **`--experiment_num`** (`int`): Defines the experiment setup:
   - `1` for single sample  
