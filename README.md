@@ -89,8 +89,8 @@ JOLI provides several command-line flags to configure the execution. Below are t
 - **`--alpha_initial`** (`float`, default=`1`): The fixed sum value of alpha. For single sample (SS), use `1`; for multi-sample (MS), depends on number of isoforms, for 150k isoforms we used `10e5`.  
 - **`--max_em_rounds`** (`int`, default=`30`): The maximum number of EM iterations.  
 - **`--experiment_num`** (`int`): Defines the experiment setup:
-  - `1` for single sample  
-  - `4` for multisample  
+  - `1` for single sample (JOLI SS)
+  - `4` for multi-sample (JOLI MS)
 - **`--process_bam_required`** (`int`): If set to `1`, only processes the BAM files and saves them as `.pkl` files (EM will not run).  
 - **`--process_saved_dir`** (`str`): Path to save the processed BAM files.  
 - **`--bam_dir`** (`str`): Path to the original BAM files.  
